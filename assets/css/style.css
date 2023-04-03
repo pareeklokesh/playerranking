@@ -1,0 +1,188 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+}
+.w-100 {
+	width: 100%;
+}
+.d-block {
+	display: block;
+}
+.d-flex {
+  display: flex;
+}
+.player-rank {
+  background: #000;
+}
+.player-item {
+  width: 33.33%;
+  padding: 15px;
+}
+.player-profile {
+  text-align: center;
+}
+.player-profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.player-profile span {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.player-profile strong {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 5px 0;
+}
+.player-profile p {
+  font-size: 12px;
+}
+.playerrank-list ol {
+  padding: 0;
+  display: block;
+}
+.playerrank-list ol li, .playerrank-list ol li p, .playerrank-list ol li strong {
+	color: #edb72e;
+}
+.playerrank-list ol li img, .userchat-msg img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.userchat-msg img {
+	width: 30px;
+	height: 30px;
+}
+.playerrank-list ol li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.playerrank-list ol {
+	margin-top: 25px;
+}
+.playerrank-list ol li p {
+	font-size: 12px;
+	width: 100%;
+	display: block;
+}
+.playerrank-list ol li strong {
+  display: block;
+  text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+.userchat {
+  /*padding-left: 15px;*/
+  position: relative;
+  height: 100%;
+}
+.userchat {
+display: flex;
+width: 100%;
+flex-wrap: wrap;
+align-items: end;
+flex-direction: row;
+flex-flow: column-reverse;
+}
+.userchat-msg {
+  width: 100%;
+  display: block;
+}
+.userchat-msg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.chat-block {
+	background: linear-gradient(#393939, #313131);
+}
+.userchat-msg p {
+  background: #000;
+  font-size: 14px;
+  padding: 5px 12px;
+  border-radius: 25px;
+}
+.msg-send {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 15px 10px;
+  display: flex;
+align-items: center;
+gap: 1%;
+}
+.msgtextbox {
+  width: 80%;
+}
+.msgtextbox input {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #fff;
+  padding: 8px 10px;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #fff;
+}
+.sendBtn {
+  width: 19%;
+  text-align: right;
+}
+.btnSend {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.userchat {
+  padding-bottom: 60px;
+}
+input {
+	outline: none;
+}
+
+
+@media (max-width: 767px) {
+	.playerRank-block {
+		display: none;
+	}
+	.player-rank {
+		flex-wrap: wrap;
+	}
+	.player-item {
+		width: 100%;
+	}
+	.player-rank {
+		background: url('../img/video.png') no-repeat;
+		background-size: cover;
+		background-position: top left;
+		position: relative;
+	}
+	.player-item.chat-block {
+  position: absolute;
+  bottom: 0;
+}
+.player-item.chat-block {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, #1c1c1c);
+}
+.game-block {
+	position: relative;
+	z-index: 1;
+}
+.player-rank {
+  padding-bottom: 80px;
+}
+.input-desc {
+	z-index: 11;
+}
+}
