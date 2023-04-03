@@ -161,9 +161,7 @@ input {
 		width: 100%;
 	}
 	.player-rank {
-		background: url('../img/video.png') no-repeat;
-		background-size: cover;
-		background-position: top left;
+		background: transparent;
 		position: relative;
 	}
 	.player-item.chat-block {
@@ -185,4 +183,12 @@ input {
 .input-desc {
 	z-index: 11;
 }
+.gameVideo {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  display: block !important;
+  top: 0;
+  left: 0;
+} 
 }
