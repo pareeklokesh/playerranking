@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Player Ranking</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+	 <style>
+	 	@media (max-width:767px){
+	 		body {
+  padding-top: 95px;
+}
+	 	}
+	 </style>
+</head>
+<body>
+	<div class="gameheader w-100">
+	<header class="w-100">
+		<div class="header-row">
+			<div class="userFollow">
+				<img class="userPro" src="assets/img/profile.jpg" />
+				<div class="">
+					<p class="userName">AMY <a class="followBtn" href="#">Follow</a></p>
+					<span class="d-block followersDes"><strong>4.0K</strong> followers</span>
+				</div>
+			</div>
+			
+			<button class="navBarBtn">
+				<span></span>
+				<span></span>
+				<span style="margin: 0;"></span>
+			</button>
+		</div>
+	</header>
+	
+</div>
+
+
+<div class="tabs w-100">
+  <ul id="tabs-nav" class="tabsNav">
+    <li><a href="#tab1">Popular</a></li>
+    <li><a href="#tab2">LIVE</a></li>
+    <li><a href="#tab3">Followers</a></li>
+  </ul> <!-- END tabs-nav -->
+  <div id="tabs-content">
+    <div id="tab1" class="tab-content w-100">
+      <img src="assets/img/screen.jpg" class="w-100" />
+      <div class="w-100 d-flex align-items-center justify-content-between" style="padding: 15px 0;padding-bottom: 0;">
+      	<div class="d-flex align-items-center profileAll">
+      		<img class="proimgall" src="assets/img/profile.jpg" />
+      		<p class="d-flex align-items-center"><span style="padding-right: 5px;">AMY</span> <img src="assets/img/england.png" width="16"></p>
+      	</div>
+      	<div class="">
+      		<p>
+      			<strong>4.0K</strong> follower
+      		</p>
+      	</div>
+      </div>
+      <div class="w-100" style="padding-bottom: 15px;">
+      	<div class="viewCount" style="justify-content: end;">
+							<img src="assets/img/view.png" />
+							<p>2345</p>
+						</div>
+      </div>
+      <img src="assets/img/screen.jpg" class="w-100" />
+      <div class="w-100 d-flex align-items-center justify-content-between" style="padding: 15px 0;padding-bottom: 0;">
+      	<div class="d-flex align-items-center profileAll">
+      		<img class="proimgall" src="assets/img/profile.jpg" />
+      		<p class="d-flex align-items-center"><span style="padding-right: 5px;">AMY</span> <img src="assets/img/england.png" width="16"></p>
+      	</div>
+      	<div class="">
+      		<p>
+      			<strong>4.0K</strong> follower
+      		</p>
+      	</div>
+      </div>
+      <div class="w-100" style="text-align: right;">
+      	<div class="viewCount" style="justify-content: end;">
+							<img src="assets/img/view.png" />
+							<p>2345</p>
+						</div>
+      </div>
+    </div>
+    <div id="tab2" class="tab-content">
+      .......
+    </div>
+    <div id="tab3" class="tab-content">
+      ........
+    </div>
+  </div> 
+</div>
+
+
+<footer style="height: 25px;"></footer>
+
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+
+<script>
+$('#tabs-nav li:first-child').addClass('active');
+$('.tab-content').hide();
+$('.tab-content:first').show();
+
+// Click function
+$('#tabs-nav li').click(function(){
+  $('#tabs-nav li').removeClass('active');
+  $(this).addClass('active');
+  $('.tab-content').hide();
+  
+  var activeTab = $(this).find('a').attr('href');
+  $(activeTab).fadeIn();
+  return false;
+});
+</script>
+
+</body>
+</html>

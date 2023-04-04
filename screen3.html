@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Player Ranking</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+	 <style>
+	 	@media (max-width:767px){
+	 		body {
+  padding-top: 95px;
+}
+	 	}
+	 </style>
+</head>
+<body>
+	<div class="gameheader w-100">
+	<header class="w-100">
+		<div class="header-row">
+			<div class="userFollow">
+				<img class="userPro" src="assets/img/profile.jpg" />
+				<div class="">
+					<p class="userName">AMY <a class="followBtn" href="#">Follow</a></p>
+					<span class="d-block followersDes"><strong>4.0K</strong> followers</span>
+				</div>
+			</div>
+			
+			<button class="navBarBtn">
+				<span></span>
+				<span></span>
+				<span style="margin: 0;"></span>
+			</button>
+		</div>
+	</header>
+	
+</div>
+
+
+<div class="tabs w-100">
+  <ul id="tabs-nav" class="tabsNav" style="justify-content:center;">
+    <li><a href="#tab1" style="margin-right:10px;">Popular</a></li>
+    <li><a href="#tab2">LIVE</a></li>
+  </ul> <!-- END tabs-nav -->
+  <div id="tabs-content">
+    <div id="tab1" class="tab-content w-100">
+      <h2 class="text-center" style="font-size: 18px;margin-bottom: 5px;">Streamer Ranking</h2>
+      <p class="text-center">2022/12/6-2022/12/13</p>
+      <table class="streamer-data w-100">
+      	<tbody>
+      	<tr class="yellowText">
+      		<td>1</td>
+      		<td>
+      			<img src="assets/img/profile.jpg" /> <strong>AMY</strong>
+      		</td>
+      		<td class="text-right">220,000pt</td>
+      	</tr>
+      	<tr class="yellowText">
+      		<td>2</td>
+      		<td>
+      			<img src="assets/img/profile.jpg" /> <strong>AMY</strong>
+      		</td>
+      		<td class="text-right">220,000pt</td>
+      	</tr>
+      	<tr class="yellowText">
+      		<td>3</td>
+      		<td>
+      			<img src="assets/img/profile.jpg" /> <strong>AMY</strong>
+      		</td>
+      		<td class="text-right">220,000pt</td>
+      	</tr>
+      	<tr class="yellowText">
+      		<td>4</td>
+      		<td>
+      			<img src="assets/img/profile.jpg" /> <strong>AMY</strong>
+      		</td>
+      		<td class="text-right">220,000pt</td>
+      	</tr>
+      	<tr>
+      		<td>5</td>
+      		<td>
+      			<img src="assets/img/profile.jpg" /> <strong>AMY</strong>
+      		</td>
+      		<td class="text-right">220,000pt</td>
+      	</tr>
+      	<tr>
+      		<td>6</td>
+      		<td>
+      			<img src="assets/img/profile.jpg" /> <strong>AMY</strong>
+      		</td>
+      		<td class="text-right">220,000pt</td>
+      	</tr>
+      	<tr>
+      		<td>7</td>
+      		<td>
+      			<img src="assets/img/profile.jpg" /> <strong>AMY</strong>
+      		</td>
+      		<td class="text-right">220,000pt</td>
+      	</tr>
+      	<tr>
+      		<td>8</td>
+      		<td>
+      			<img src="assets/img/profile.jpg" /> <strong>AMY</strong>
+      		</td>
+      		<td class="text-right">220,000pt</td>
+      	</tr>
+      	<tr>
+      		<td>9</td>
+      		<td>
+      			<img src="assets/img/profile.jpg" /> <strong>AMY</strong>
+      		</td>
+      		<td class="text-right">220,000pt</td>
+      	</tr>
+      	<tr>
+      		<td>10</td>
+      		<td>
+      			<img src="assets/img/profile.jpg" /> <strong>AMY</strong>
+      		</td>
+      		<td class="text-right">220,000pt</td>
+      	</tr>
+
+      	</tbody>
+      </table>
+    </div>
+    <div id="tab2" class="tab-content">
+      .......
+    </div>
+  </div> 
+</div>
+
+
+<footer style="height: 25px;"></footer>
+
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+
+<script>
+$('#tabs-nav li:first-child').addClass('active');
+$('.tab-content').hide();
+$('.tab-content:first').show();
+
+// Click function
+$('#tabs-nav li').click(function(){
+  $('#tabs-nav li').removeClass('active');
+  $(this).addClass('active');
+  $('.tab-content').hide();
+  
+  var activeTab = $(this).find('a').attr('href');
+  $(activeTab).fadeIn();
+  return false;
+});
+</script>
+
+</body>
+</html>
