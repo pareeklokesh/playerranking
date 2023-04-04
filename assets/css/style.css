@@ -397,7 +397,14 @@ color: #333;
 
 
 @media (min-width: 768px) {
-  
+  .fullPage {
+  width: 460px;
+  margin: 0px auto;
+  background: #000;
+}
+.screenPage {
+  background: #fff;
+}
   .gameView {
     padding-top: 0;
     padding-bottom: 0;
