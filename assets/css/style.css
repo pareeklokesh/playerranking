@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
 	color: #fff;
+  font-size: 14px;
 }
 body {
 	background: #000;
@@ -159,12 +160,76 @@ input {
 .msgtextbox input:focus {
 	background: #000;
 }
-.header-row {
+.header-row, .gameView {
   padding: 8px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.gameView {
+  align-items: inherit;
+}
+.userPro {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.userFollow {
+  display: flex;
+  align-items: center;
+}
+.userName {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.followBtn {
+  text-decoration: none;
+  background: #0d70ff;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 1px 12px;
+  border-radius: 25px;
+}
+.followersDes {
+  font-size: 14px;
+  margin-top: 4px;
+}
+.navBarBtn {
+  background: #fff;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.navBarBtn span {
+  height: 2px;
+  background: #000;
+  display: block;
+  margin-bottom: 4px;
+  width: 100%;
+}
+.gameView strong {
+  color: yellow;
+}
+.allviewerimg img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: -8px;
+}
+.viewCount {
+  display: flex;
+  align-items: center;
+}
+
 
 
 @media (max-width: 767px) {
@@ -189,6 +254,7 @@ input {
   position: absolute;
   bottom: 0;
   background: linear-gradient(to bottom, transparent, #1c1c1c);
+  height: 100vh;
 }
 .game-block {
 	position: relative;
@@ -209,4 +275,17 @@ input {
   left: 0;
   background: #000;
 } 
+.gameheader.w-100 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.gameView {
+  padding-top: 0;
+}
+body {
+  padding-top: 140px;
+  position: relative;
+}
 }
