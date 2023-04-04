@@ -234,7 +234,99 @@ input {
 }
 
 
+/*Screen*/
+
+.followeRanking * {color: #000;}
+.followeRanking {
+  background: #fff;
+  padding: 15px 60px;
+}
+.followeRanking * {
+  color: #000;
+}
+.followeRanking ul {
+  margin-top: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.followeRanking ul li strong {
+  font-size: 22px;
+  position: relative;
+}
+.followeRanking ul li strong sub {
+position: relative;
+bottom: 3px;
+font-size: 12px;
+}
+.followeRanking ul li span {
+  display: block;
+  font-size: 12px;
+  margin-top: 8px;
+  text-align: center;
+  color: #555;
+}
+.followeRanking ul li {
+  text-align: center;
+  padding: 0 40px;
+  position: relative;
+}
+.followeRanking ul li::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 30px;
+  background: #666;
+  position: absolute;
+  right: 0;
+  top: 13px;
+  opacity: 0.7;
+}
+.followeRanking ul li:last-child::before {
+  display: none;
+}
+.titleBlock {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.followeRanking button {
+  background: #0d70ff;
+  border: 0;
+  width: 100%;
+  padding: 15px 8px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.followeRanking p {
+  text-align: justify;
+  line-height: 24px;
+color: #333;
+}
+.followeRanking button.liveBtn, .liveBtn {
+  background: linear-gradient(to bottom, #f634c9, #9b39fa);
+  display: inline-block;
+  width: auto;
+  margin: 0px auto;
+    margin-top: 0px;
+  text-align: center;
+  padding: 3px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+.followeRanking ul li:first-child{padding-left: 0;}
+.followeRanking ul li:last-child{padding-right: 0;}
+
+
+
 @media (min-width: 768px) {
+  
   .gameView {
     padding-top: 0;
     padding-bottom: 0;
@@ -262,9 +354,26 @@ input {
 
 
 @media (max-width: 767px) {
+  .followeRanking ul li {padding: 0 25px;}
 	.playerRank-block {
 		display: none;
 	}
+  .followeRanking ul li strong {
+  font-size: 16px;
+}
+.followeRanking ul li span {
+  margin-top: 3px;
+}
+.followeRanking ul li:last-child span {
+  margin-top: 1px !important;
+}
+.followeRanking ul li::before {
+  height: 22px;
+  top: 9px;
+}
+.followeRanking {
+  padding: 15px 30px;
+}
 	.player-rank {
 		flex-wrap: wrap;
 	}
