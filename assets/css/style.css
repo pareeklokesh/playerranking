@@ -159,6 +159,12 @@ input {
 .msgtextbox input:focus {
 	background: #000;
 }
+.header-row {
+  padding: 8px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 @media (max-width: 767px) {
@@ -173,7 +179,7 @@ input {
 	}
 	.player-rank {
 		background: transparent;
-		position: relative;
+		/*position: relative;*/
 	}
 	.player-item.chat-block {
   position: absolute;
