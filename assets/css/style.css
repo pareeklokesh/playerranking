@@ -254,7 +254,7 @@ input {
   position: absolute;
   bottom: 0;
   background: linear-gradient(to bottom, transparent, #1c1c1c);
-  height: 100vh;
+  height: 100%;
 }
 .game-block {
 	position: relative;
