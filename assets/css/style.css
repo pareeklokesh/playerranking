@@ -108,7 +108,10 @@ flex-flow: column-reverse;
   margin-bottom: 15px;
 }
 .chat-block {
-	background: linear-gradient(#393939, #313131);
+	/* background: linear-gradient(#393939, #313131); */
+  background: url('../img/video.png') no-repeat;
+  background-size: cover;
+background-position: top center;
 }
 .userchat-msg p {
   background: transparent;
@@ -237,6 +240,23 @@ input {
     padding-bottom: 0;
     width: 70%;
   }
+  .player-rank {
+    background: #000;
+  }
+  .player-item.chat-block {
+    background: #000;
+  }
+  /*.userchat-msg p {
+    color: #000;
+  }
+   .userchat-msg p.justNowMsg{color: #fff;}
+  .msgtextbox input {
+    border: 2px solid #000;
+    color: #000;
+  }
+  .msgtextbox input:focus {
+    color: #fff;
+  } */
 }
 
 
