@@ -394,6 +394,19 @@ color: #333;
 .streamer-data {
   margin-top: 15px;
 }
+.tabthreescreen li a {
+  background: linear-gradient(to bottom, #f634c9, #9b39fa);
+  color: #fff;
+  border: 0;
+  padding: 7px 10px;
+}
+.tabthreescreen li a span {color: #fff;font-weight: 700;}
+.tabthreescreen li.active a span {
+  background: linear-gradient(to bottom, #f634c9, #9b39fa);
+    background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 @media (min-width: 768px) {
