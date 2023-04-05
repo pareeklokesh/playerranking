@@ -5,9 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Player Ranking</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	 <style>
+	 	.fullPage {
+  border: 1px solid #000;
+}
+.navBarBtn {
+  order: 2;
+}
+.gameView {
+  order: 3;
+}
+.userFollow {
+  order: 1;
+}
+.header-row {
+  flex-wrap: wrap;
+}
+.gameView {
+  order: 3;
+  padding-left: 0;padding-right: 0;
+  width: 100%;
+}
+@media (max-width:767px) {
+	.fullPage {
+  border: 0;
+}
+}
+	 </style> 
 </head>
-<body>
+<body class="screenPage">
+	<div class="fullPage">
 	<div class="gameheader w-100">
 	<header class="w-100">
 		<div class="header-row">
@@ -56,8 +84,9 @@
 	
 </div>
 
-<div class="w-100">
+<div class="w-100 position-relative liveVideo">
 	<img src="assets/img/screen.jpg" class="w-100" />
+	<button class="liveBtn">Live</button>
 </div>
 <div class="w-100">
 	<div class="followeRanking">
@@ -80,14 +109,16 @@
 		</li>
 	</ul>
 	<button>Lorem Ipsum</button>
+	<button>Lorem Ipsum</button>
 	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 	<div class="w-100 text-center">
-	<button class="liveBtn">Live</button>
+	
 </div>
 </div>
 </div>
 
 <footer style="height: 25px;"></footer>
+</div>
 
 <script type="text/javascript" src="assets/js/jquery.js"></script>
 
