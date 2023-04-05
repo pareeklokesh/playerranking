@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Player Ranking</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+	 <style>
+	 	@media (max-width:767px){
+	 		body {
+  padding-top: 95px;
+}
+	 	}
+	 </style>
+</head>
+<body class="screenPage">
+	<div class="fullPage">
+	<div class="gameheader w-100 header__wrapper">
+	<header class="w-100">
+		<div class="header-row">
+			<div class="userFollow">
+				<button class="backBtn"><img src="assets/img/back.png" style="vertical-align: middle;" /> Back</button>
+			</div>
+			
+			<button class="navBarBtn mobile_menu">
+				<span></span>
+				<span></span>
+				<span style="margin: 0;"></span>
+			</button>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="header_nav">
+		<div class="w-100 logo">
+			<a href="#">
+				<img src="assets/img/logo.png" />
+			</a>
+		</div>
+      <ul class="navbar-nav header_nav_menu">
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#" class="switchToggle"><p><img src="assets/img/home.png" /><span>My Page</span></p>
+        		<input type="checkbox" id="switch" class="" name="">
+				    <label for="switch" class="value_add"></label></a>
+        </li>
+         
+      </ul>
+      <ul class="navbar-nav-footer">
+      	<li class="d-block">
+      		<a href="#">Help</a>
+      	</li>
+      	<li class="d-block">
+      		<a href="#">Back to the casino home</a>
+      	</li>
+      </ul>
+    </div>
+	
+</div>
+
+<div class="w-100" style="padding: 0 15px;">
+	<h2 class="text-center titleBlock text-white" style="text-transform: inherit;">My page</h2>
+	<img src="assets/img/profile.jpg" class="pageuserImg">
+	<div class="w-100 text-center">
+	<p class="usernameBox">Lorem</p>
+</div>
+	<div class="followeRanking" style="padding-left:0;padding-right: 0;background: transparent;padding-top: 5px;">
+	<ul>
+		<li>
+			<strong class="text-white">3.3M</strong>
+			<span>Follower</span>
+		</li>
+		<li>
+			<strong class="text-white">23<sub class="text-white">/145</sub></strong>
+			<span style="margin-top: 6px;">Follower</span>
+		</li>
+	</ul>
+
+</div>
+<div class="w-100">
+	<h3 class="subTtile">Lorem Ipsum</h3>
+	<ul class="userList">
+		<li>
+			<p>
+				<img src="assets/img/profile.jpg"> <strong class="text-up">Joe</strong>
+			</p>
+			<button class="disabledBtn">disabled</button>
+		</li>
+		<li>
+			<p>
+				<img src="assets/img/profile.jpg"> <strong class="text-up">Joe</strong>
+			</p>
+			<button class="disabledBtn">disabled</button>
+		</li>
+		<li>
+			<p>
+				<img src="assets/img/profile.jpg"> <strong class="text-up">Joe</strong>
+			</p>
+			<button class="disabledBtn">disabled</button>
+		</li>
+	</ul>
+	<h3 class="subTtile">Lorem Ipsum</h3>
+	<ul class="userList">
+		<li>
+			<p>
+				<img src="assets/img/profile.jpg"> <strong class="text-up">Joe</strong>
+			</p>
+			<button class="disabledBtn activeBtn">disabled</button>
+		</li>
+		<li>
+			<p>
+				<img src="assets/img/profile.jpg"> <strong class="text-up">Joe</strong>
+			</p>
+			<button class="disabledBtn activeBtn">disabled</button>
+		</li>
+		<li>
+			<p>
+				<img src="assets/img/profile.jpg"> <strong class="text-up">Joe</strong>
+			</p>
+			<button class="disabledBtn activeBtn">disabled</button>
+		</li>
+	</ul>
+</div>
+</div>
+
+
+
+
+
+
+
+<footer style="height: 25px;"></footer>
+</div>
+
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+
+<script defer type="text/javascript"> 
+document.addEventListener('DOMContentLoaded', function () {
+    let navToggle = document.getElementsByClassName('mobile_menu')[0];
+    const html = document.getElementsByTagName("html")[0];
+    let menu = document.getElementsByClassName('header__wrapper')[0];
+
+    navToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        if(navToggle.contains(e.target)){
+          html.classList.toggle("openNav");
+        } 
+    });
+    document.addEventListener('click', function(e) {
+        let isClickMenu = menu.contains(e.target);
+        if (!isClickMenu) {
+          html.classList.remove("openNav");
+        }
+    });
+});
+</script>
+
+</body>
+</html>

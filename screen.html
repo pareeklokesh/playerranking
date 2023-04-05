@@ -36,7 +36,7 @@
 </head>
 <body class="screenPage">
 	<div class="fullPage">
-	<div class="gameheader w-100">
+	<div class="gameheader w-100 header__wrapper">
 	<header class="w-100">
 		<div class="header-row">
 			<div class="userFollow">
@@ -61,7 +61,7 @@
 				</div>
 				<div class="">
 					<p>2023-01-23 #06:00:00</p>
-					<div class="" style="display:flex;align-items: center;justify-content: space-between;margin-top: 3px;">
+					<div class="viewheader d-flex align-items-center justify-content-between" style="margin-top: 3px;">
 						<div class="allviewerimg">
 							<img src="assets/img/profile.jpg" style="margin:0;" />
 							<img src="assets/img/profile.jpg" />
@@ -72,15 +72,62 @@
 							<p>2345</p>
 						</div>
 					</div>
+					<div class="rankingheader d-flex align-items-center justify-content-between" style="margin-top: 3px;display: none;">
+						<div class="allviewerimg">
+							<p style="font-size: 12px;color: #cecdcd;">Ranking  <img class="rankingicon" src="assets/img/ranking.png" style="margin:0;vertical-align: middle;" /></p>
+						</div>
+						<div class="viewCount">
+							<p><strong style="color: #fff;font-size: 16px;">5</strong>/2345</p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<button class="navBarBtn">
+			<button class="navBarBtn mobile_menu">
 				<span></span>
 				<span></span>
 				<span style="margin: 0;"></span>
 			</button>
 		</div>
 	</header>
+
+	<!-- Menu -->
+
+	<div class="header_nav">
+		<div class="w-100 logo">
+			<a href="#">
+				<img src="assets/img/logo.png" />
+			</a>
+		</div>
+      <ul class="navbar-nav header_nav_menu">
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+         
+      </ul>
+      <ul class="navbar-nav-footer">
+      	<li class="d-block">
+      		<a href="#">Help</a>
+      	</li>
+      	<li class="d-block">
+      		<a href="#">Back to the casino home</a>
+      	</li>
+      </ul>
+    </div>
 	
 </div>
 
@@ -117,18 +164,46 @@
 </div>
 </div>
 
+
 <footer style="height: 25px;"></footer>
 </div>
 
 <script type="text/javascript" src="assets/js/jquery.js"></script>
 
-<script>
-	$('#interChat').on('blur', function(){
-   $('.chat-block').removeClass('input-desc');
-}).on('focus', function(){
-  $('.chat-block').addClass('input-desc');
+
+<script defer type="text/javascript"> 
+document.addEventListener('DOMContentLoaded', function () {
+    let navToggle = document.getElementsByClassName('mobile_menu')[0];
+    const html = document.getElementsByTagName("html")[0];
+    let menu = document.getElementsByClassName('header__wrapper')[0];
+
+    navToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        if(navToggle.contains(e.target)){
+          html.classList.toggle("openNav");
+        } 
+    });
+    document.addEventListener('click', function(e) {
+        let isClickMenu = menu.contains(e.target);
+        if (!isClickMenu) {
+          html.classList.remove("openNav");
+        }
+    });
 });
 </script>
+
+<script>
+	$(".viewheader").click(function(){
+		$(this).css("display", "none");
+		$(".rankingheader").css("display", "flex");
+	});
+	$(".rankingheader").click(function(){
+		$(this).css("display", "none");
+		$(".viewheader").css("display", "flex");
+	});
+</script>
+
+
 
 </body>
 </html>

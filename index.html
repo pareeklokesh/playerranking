@@ -7,8 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
 </head>
-<body>
-	<div class="gameheader w-100">
+<body class="screenPage mobileview">
+	<div class="fullPage">
+	<div class="gameheader w-100 header__wrapper">
 	<header class="w-100">
 		<div class="header-row">
 			<div class="userFollow">
@@ -46,13 +47,52 @@
 					</div>
 				</div>
 			</div>
-			<button class="navBarBtn">
+			<button class="navBarBtn mobile_menu">
 				<span></span>
 				<span></span>
 				<span style="margin: 0;"></span>
 			</button>
 		</div>
 	</header>
+
+	<!-- Menu -->
+
+	<div class="header_nav">
+		<div class="w-100 logo">
+			<a href="#">
+				<img src="assets/img/logo.png" />
+			</a>
+		</div>
+      <ul class="navbar-nav header_nav_menu">
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+         
+      </ul>
+      <ul class="navbar-nav-footer">
+      	<li class="d-block">
+      		<a href="#">Help</a>
+      	</li>
+      	<li class="d-block">
+      		<a href="#">Back to the casino home</a>
+      	</li>
+      </ul>
+    </div>
 	
 </div>
 
@@ -123,6 +163,18 @@
 					</div>
 					<div class="userchat-msg">
 						<img src="assets/img/profile.jpg" />
+						<p>Hello</p>
+					</div>
+					<div class="userchat-msg">
+						<img src="assets/img/profile.jpg" />
+						<p>Hello</p>
+					</div>
+					<div class="userchat-msg">
+						<img src="assets/img/profile.jpg" />
+						<p>Hello</p>
+					</div>
+					<div class="userchat-msg">
+						<img src="assets/img/profile.jpg" />
 						<p class="justNowMsg">Hiii.........................</p>
 					</div>
 				</div>
@@ -146,6 +198,7 @@
 </div>
 
 <footer style="height: 25px;"></footer>
+</div>
 
 <script type="text/javascript" src="assets/js/jquery.js"></script>
 
@@ -154,6 +207,27 @@
    $('.chat-block').removeClass('input-desc');
 }).on('focus', function(){
   $('.chat-block').addClass('input-desc');
+});
+</script>
+
+<script defer type="text/javascript"> 
+document.addEventListener('DOMContentLoaded', function () {
+    let navToggle = document.getElementsByClassName('mobile_menu')[0];
+    const html = document.getElementsByTagName("html")[0];
+    let menu = document.getElementsByClassName('header__wrapper')[0];
+
+    navToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        if(navToggle.contains(e.target)){
+          html.classList.toggle("openNav");
+        } 
+    });
+    document.addEventListener('click', function(e) {
+        let isClickMenu = menu.contains(e.target);
+        if (!isClickMenu) {
+          html.classList.remove("openNav");
+        }
+    });
 });
 </script>
 

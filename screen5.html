@@ -78,12 +78,9 @@
 
 
 <div class="tabs w-100">
-  <ul id="tabs-nav" class="tabsNav tabthreescreen" style="justify-content:center;">
-    <li><a href="#tab1" style="margin-right:10px;"><span>Popular</span></a></li>
-    <li><a href="#tab2"><span>Streamer</span></a></li>
-  </ul> <!-- END tabs-nav -->
+  
   <div id="tabs-content">
-    <div id="tab1" class="tab-content w-100">
+    <div id="" class="tab-content w-100">
       <h2 class="text-center" style="font-size: 18px;margin-bottom: 5px;">Streamer Ranking</h2>
       <p class="text-center">2022/12/6-2022/12/13</p>
       <table class="streamer-data w-100">
@@ -162,9 +159,6 @@
       	</tbody>
       </table>
     </div>
-    <div id="tab2" class="tab-content">
-      .......
-    </div>
   </div> 
 </div>
 
@@ -176,22 +170,6 @@
 
 <script type="text/javascript" src="assets/js/jquery.js"></script>
 
-<script>
-$('#tabs-nav li:first-child').addClass('active');
-$('.tab-content').hide();
-$('.tab-content:first').show();
-
-// Click function
-$('#tabs-nav li').click(function(){
-  $('#tabs-nav li').removeClass('active');
-  $(this).addClass('active');
-  $('.tab-content').hide();
-  
-  var activeTab = $(this).find('a').attr('href');
-  $(activeTab).fadeIn();
-  return false;
-});
-</script>
 <script defer type="text/javascript"> 
 document.addEventListener('DOMContentLoaded', function () {
     let navToggle = document.getElementsByClassName('mobile_menu')[0];

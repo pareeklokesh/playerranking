@@ -16,7 +16,7 @@
 </head>
 <body class="screenPage">
 	<div class="fullPage">
-	<div class="gameheader w-100">
+	<div class="gameheader w-100 header__wrapper">
 	<header class="w-100">
 		<div class="header-row">
 			<div class="userFollow">
@@ -27,13 +27,52 @@
 				</div>
 			</div>
 			
-			<button class="navBarBtn">
+			<button class="navBarBtn mobile_menu">
 				<span></span>
 				<span></span>
 				<span style="margin: 0;"></span>
 			</button>
 		</div>
 	</header>
+
+	<!-- Menu -->
+
+	<div class="header_nav">
+		<div class="w-100 logo">
+			<a href="#">
+				<img src="assets/img/logo.png" />
+			</a>
+		</div>
+      <ul class="navbar-nav header_nav_menu">
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+        <li>
+        	<a href="#"><img src="assets/img/home.png" /><span>My Page</span></a>
+        </li>
+         
+      </ul>
+      <ul class="navbar-nav-footer">
+      	<li class="d-block">
+      		<a href="#">Help</a>
+      	</li>
+      	<li class="d-block">
+      		<a href="#">Back to the casino home</a>
+      	</li>
+      </ul>
+    </div>
 	
 </div>
 
@@ -92,6 +131,26 @@
   </div> 
 </div>
 
+<div class="liveooption w-100 d-flex align-items-center justify-content-between">
+	<div class="d-flex align-items-center">
+		<div class="position-relative">
+			<img src="assets/img/screen.jpg" style="width: 120px;margin-right: 10px;" />
+			<button class="liveBtn" style="left: 5px;margin: 0;top: 10px;position: absolute;font-size: 12px;">Live</button>
+		</div>
+		<div class="">
+			<p><strong>AMY</strong> <img src="assets/img/england.png" width="16" style="vertical-align:middle;" /></p>
+			<p><strong>4.0K</strong> follower</p>
+		</div>
+	</div>
+	<div class="">
+		<div class="d-flex align-items-center" style="justify-content: end;">
+							<img src="assets/img/view.png" style="vertical-align: middle;">
+							<p style="padding-left: 3px;">2345</p>
+							<button class="closeBtn"><img src="assets/img/close.png" /></button>
+						</div>
+	</div>
+</div>
+
 
 <footer style="height: 25px;"></footer>
 </div>
@@ -114,6 +173,29 @@ $('#tabs-nav li').click(function(){
   return false;
 });
 </script>
+
+<script defer type="text/javascript"> 
+document.addEventListener('DOMContentLoaded', function () {
+    let navToggle = document.getElementsByClassName('mobile_menu')[0];
+    const html = document.getElementsByTagName("html")[0];
+    let menu = document.getElementsByClassName('header__wrapper')[0];
+
+    navToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        if(navToggle.contains(e.target)){
+          html.classList.toggle("openNav");
+        } 
+    });
+    document.addEventListener('click', function(e) {
+        let isClickMenu = menu.contains(e.target);
+        if (!isClickMenu) {
+          html.classList.remove("openNav");
+        }
+    });
+});
+</script>
+
+
 
 </body>
 </html>
