@@ -234,7 +234,7 @@ input {
 }
 
 
-/*Screen*/
+/*Screen1*/
 
 .followeRanking * {color: #000;}
 .followeRanking {
@@ -301,6 +301,7 @@ font-size: 12px;
   border-radius: 5px;
   margin-bottom: 15px;
   margin-top: 15px;
+  cursor: pointer;
 }
 .followeRanking p {
   text-align: justify;
@@ -322,8 +323,21 @@ color: #333;
 }
 .followeRanking ul li:first-child{padding-left: 0;}
 .followeRanking ul li:last-child{padding-right: 0;}
+.position-relative {
+  position: relative;
+}
+.liveBtn {
+  border: 0;
+}
+.liveVideo .liveBtn {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  margin: 0;
+}
 
-/*Screen1*/
+
+/*Screen2*/
 
 .tabsNav {
   width: 100%;
@@ -407,6 +421,8 @@ color: #333;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 
 
 @media (min-width: 768px) {
