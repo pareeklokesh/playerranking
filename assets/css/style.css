@@ -631,6 +631,54 @@ color: #333;
   justify-content: space-between;
 }
 
+/* ----------Result Page Css------------- */
+.result {
+  background: url('../img/screen.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.resultList {
+  list-style: none;
+  width: 100%;
+  padding: 40px;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.resultList li {
+  margin: 0 15px;
+  font-size: 25px;
+  position: relative;
+  z-index: 1;
+  min-width: 55px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resultList li::before {
+content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: perspective(500px) scaleZ(4) rotateX(-20deg);
+}
+.resultList li.activeResult::before {
+  background: #b61b13;
+  border-color: #fce264;
+}
+
+
+
+
+/* ----------Result Page Css End!------------- */
+
 
 
 /*Home Page Mobile View*/
@@ -747,6 +795,12 @@ z-index: 1;
   .msgtextbox input:focus {
     color: #fff;
   } */
+  .mobileview .fullPage {
+  padding-top: 125px;
+}
+.minmt35 {
+  margin-top: -35px;
+}
 }
 
 
